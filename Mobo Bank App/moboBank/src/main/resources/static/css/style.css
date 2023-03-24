@@ -1,0 +1,36 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form label {
+    display: inline-block;
+    width: 150px;
+}
+
+form input {
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+form button {
+    display: block;
+    margin: 20px 0;
+}
+
+#balance-container {
+    margin-top: 20px;
+    display: none;
+}
+
+#balance-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#balance-container p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
