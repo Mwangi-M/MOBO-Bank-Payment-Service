@@ -26,12 +26,17 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    // Constructor
+    // Parameterized Constructor
     public User(Long id, String name, String email, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
+    }
+
+    // Default Constructor
+    public User() {
+
     }
 
     // Getter and Setter methods for the id field

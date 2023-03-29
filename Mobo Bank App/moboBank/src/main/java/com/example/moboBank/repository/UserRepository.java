@@ -1,4 +1,4 @@
-package com.example.moboBank.model;
+package com.example.moboBank.repository;
 
 import com.example.moboBank.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,6 @@
-package com.example.moboBank.model;
+package com.example.moboBank.service;
+
+import com.example.moboBank.model.User;
 
 import java.util.List;
 

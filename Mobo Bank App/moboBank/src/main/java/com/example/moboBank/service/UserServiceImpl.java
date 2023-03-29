@@ -1,6 +1,8 @@
-package com.example.moboBank.model;
+package com.example.moboBank.service;
 
-import com.example.moboBank.UserRepository;
+import com.example.moboBank.model.User;
+import com.example.moboBank.repository.UserRepository;
+import com.example.moboBank.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

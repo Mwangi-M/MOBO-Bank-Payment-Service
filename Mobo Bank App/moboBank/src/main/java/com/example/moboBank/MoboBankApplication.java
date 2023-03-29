@@ -27,11 +27,11 @@ public class MoboBankApplication {
 
 		// Prepare the response payload
 		BalanceResponse response = new BalanceResponse();
-		response.setTransactionReference(transactionReference);
-		response.setTransactionCode(transactionCode);
-		response.setAmount(amount);
+		response.setTransactionReference("MP90023");
+		response.setTransactionCode("BIMM");
+		response.setAmount(0);
 		response.setAccountName("John Doe"); // Replace with actual account name
-		response.setPhoneNumber(phoneNumber);
+		response.setPhoneNumber("254706215505");
 		response.setActualBalance(500); // Replace with actual balance
 		response.setAvailableBalance(500); // Replace with actual available balance
 
