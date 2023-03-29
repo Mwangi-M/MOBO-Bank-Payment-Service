@@ -1,6 +1,5 @@
 package com.example.moboBank.model;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,8 +13,8 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<model.User> getUser(@PathVariable Long id) {
-        model.User user = userService.getUserById(id);
+    public ResponseEntity<User> getUser(@PathVariable Long id) {
+        User user = userService.getUserById(id);
         if (user != null) {
             return new ResponseEntity<>(user, HttpStatus.OK);
         } else {
@@ -24,14 +23,14 @@ public class UserController {
     }
 
     @PostMapping("/")
-    public ResponseEntity<model.User> createUser(@RequestBody model.User user) {
-        model.User newUser = userService.createUser(user);
+    public ResponseEntity<User> createUser(@RequestBody User user) {
+        User newUser = userService.createUser(user);
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<model.User> updateUser(@PathVariable Long id, @RequestBody model.User user) {
-        model.User updatedUser = userService.updateUser(id, user);
+    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {
+        User updatedUser = userService.updateUser(id, user);
         if (updatedUser != null) {
             return new ResponseEntity<>(updatedUser, HttpStatus.OK);
         } else {

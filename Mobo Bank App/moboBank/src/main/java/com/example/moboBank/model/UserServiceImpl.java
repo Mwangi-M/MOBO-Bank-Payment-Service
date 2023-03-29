@@ -13,14 +13,14 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public List<model.User> getAllUsers() {
+    public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
     @Override
-    public model.User getUserById(Long id) {
-        Optional<model.User> user = userRepository.findById(id);
-        if(((Optional<?>) user).isPresent()) {
+    public User getUserById(Long id) {
+        Optional<User> user = userRepository.findById(id);
+        if(user.isPresent()) {
             return user.get();
         } else {
             throw new ResourceNotFoundException("User", "id", id);
@@ -28,23 +28,23 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public model.User createUser(model.User user) {
+    public User createUser(User user) {
         return userRepository.save(user);
     }
 
     @Override
-    public model.User updateUser(Long id, model.User userDetails) {
-        model.User user = getUserById(id);
+    public User updateUser(Long id, User userDetails) {
+        User user = getUserById(id);
         user.setName(userDetails.getName());
         user.setEmail(userDetails.getEmail());
         user.setPassword(userDetails.getPassword());
-        model.User updatedUser = userRepository.save(user);
+        User updatedUser = userRepository.save(user);
         return updatedUser;
     }
 
     @Override
     public void deleteUser(Long id) {
-        model.User user = getUserById(id);
+        User user = getUserById(id);
         userRepository.delete(user);
     }
 

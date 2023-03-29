@@ -1,4 +1,4 @@
-package model;
+package com.example.moboBank.model;
 
 import javax.persistence.*;
 
@@ -6,7 +6,15 @@ import javax.persistence.*;
 @Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "mobo_sequence"
+    )
+    @SequenceGenerator(
+            name = "mobo_sequence",
+            sequenceName = "mobo_sequence",
+            allocationSize = 1
+    )
     private Long id;
 
     @Column(name = "name")
@@ -25,7 +33,6 @@ public class User {
         this.email = email;
         this.password = password;
     }
-
 
     // Getter and Setter methods for the id field
     public Long getId() {

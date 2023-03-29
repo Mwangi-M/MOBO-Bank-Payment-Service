@@ -4,13 +4,13 @@ import java.util.List;
 
 public interface UserService {
 
-    List<model.User> getAllUsers();
+    List<User> getAllUsers();
 
-    model.User getUserById(Long id);
+    User getUserById(Long id);
 
-    model.User createUser(model.User user);
+    User createUser(User user);
 
-    model.User updateUser(Long id, model.User userDetails);
+    User updateUser(Long id, User userDetails);
 
     void deleteUser(Long id);
 }
